@@ -15,7 +15,7 @@ export class AppComponent implements OnInit {
 
   onSubmit(data) {
     this.http.post<any>('http://localhost:3000/api', data).subscribe( result => {
-        alert(JSON.stringify(result))
+      this.getFeedback()
     });
   } 
 
